@@ -14,3 +14,4 @@ Viešosios srities privalomos funkcijos viename iš punktu buvo nurodyta kad rei
 norėtusi daugiau laisves ir idėti kažka analogiško žvaigždutei.
 Reikalingieji atlikti materialieji ištekliai buvo surašyti labai aiškiai tai kaip buvo punktais nurodyta kokia operacine sistema galime naudoti,
 koki kodo redaktoriu naudoti ir pan. Pats naudojau Windows 10 operacine sistema. Kodo rašymui buvo naudotas Visual studio code, duomenu baze pasirinkau nerealiacine "mongo DB"
+Pati užduotis nėbuvo labai sudėtinga, bet laiko buvo skirta labai mažai
