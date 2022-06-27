@@ -5,7 +5,7 @@ import KategorijosSelect from "./KategorijosSelect"
 import SkelbimasSmall from "./SkelbimasSmall"
 import SkelbimasBig from "./SkelbimasBig"
 
-const Skelbimai = ({ set_state_status_text }) =>
+const Skelbimai = ({ set_state_status_text, state_vartotojas }) =>
 {
     const ref_paieskos_fraze = createRef()
 
@@ -50,7 +50,15 @@ const Skelbimai = ({ set_state_status_text }) =>
             <button onClick={() => { handle_search(ref_paieskos_fraze.current.value, state_kategorija) }}>ieškoti</button>
 
             {
-                state_skelbimai.map((ele, i) => { return <SkelbimasSmall key={i} skelbimas={ele} handle_click={() => { set_state_skelbimas_id(ele._id) }} /> })
+                state_skelbimai.map((ele, i) =>
+                {
+                    return <SkelbimasSmall
+                        key={i}
+                        skelbimas={ele}
+                        handle_click={() => { set_state_skelbimas_id(ele._id) }}
+                        
+                    />
+                })
             }
 
             {
@@ -59,6 +67,7 @@ const Skelbimai = ({ set_state_status_text }) =>
                         _id={state_skelbimas_id}
                         handle_close={() => { set_state_skelbimas_id(null) }}
                         set_state_status_text={set_state_status_text}
+                        state_vartotojas={state_vartotojas}
                     />
                     :
                     null

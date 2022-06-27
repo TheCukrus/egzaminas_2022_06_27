@@ -1,0 +1,16 @@
+                                    REFLEKSIJA
+        
+        Per kompetencijų praktinies dalies tikrinimo užduoti teko kurti skelbimu aplikacija.
+Visa aplikacija buvo kurta naudojant NodeJS.
+Mano veikla buvo aiški: aplikacija  turi sudaryti dvi dalys "Administracine" ir "Vieša sritis".
+Kurdamas Administracine sriti joje esantys skelbimai yra prieinami tik autentifikuotam vartotojui,
+vartotojas kuris yra neprisijunges negali matyti skelbimu, tik prisijungimo langa, dėl ko manau yra nepraktiška,
+tai kaip vartotojas gali nenorėti kurtis paskyros dėl skelbimu kuriu dar nemate.
+Rašant aplikacija yra neapibrežtumu pavyzdžiui vartotojas(administratorius) gali blokuoti vartotojus ir netinkama turini,
+nežinojau kaip teisingai atlikti šita punkta nes ar padaryti kad administratorius galėtu ir atblokuoti vartotoja ar užblokavus skelbima jis butu pašalintas.
+Punktas dėl autentifikuoto vartotojo funkcialumo buvo aiškus tai kaip buvo smulkiai aprašyta ka jis gali atlikti ir net nurodyta kokie laukai turėtu buti kuriant nauja skelbima.
+Man patiko kad šita užduotis naudoti "Bootstrap", nes tai sutaupo daug laiko kuri galima skirti funkcialumui rašyti.
+Viešosios srities privalomos funkcijos viename iš punktu buvo nurodyta kad reikia patikusiuju saraša itrakti tik spaudžiant ant žvaigždutes,
+norėtusi daugiau laisves ir idėti kažka analogiško žvaigždutei.
+Reikalingieji atlikti materialieji ištekliai buvo surašyti labai aiškiai tai kaip buvo punktais nurodyta kokia operacine sistema galime naudoti,
+koki kodo redaktoriu naudoti ir pan. Pats naudojau Windows 10 operacine sistema. Kodo rašymui buvo naudotas Visual studio code, duomenu baze pasirinkau nerealiacine "mongo DB"

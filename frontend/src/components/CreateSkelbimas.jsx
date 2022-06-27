@@ -24,7 +24,8 @@ const CreateSkelbimas = ({ set_state_status_text }) =>
                     kategorija: kategorija,
                     aprasas: aprasas,
                     kaina: kaina,
-                    nuotrauka_base64: nuotrauka_base64
+                    nuotrauka_base64: nuotrauka_base64,
+                    rodomas_skelbimas: "true"
                 }
             })
             set_state_status_text("Atlikta")
@@ -40,7 +41,7 @@ const CreateSkelbimas = ({ set_state_status_text }) =>
     return (
         <div className="CreateSkelbimas">
 
-            <h4>CreateSkelbimas</h4>
+            <h4>Sukurti skelbima</h4>
 
             <span>pavadinimas</span>
             <input type="text" ref={ref_pavadinimas} />

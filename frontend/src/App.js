@@ -14,6 +14,8 @@ import ManoSkelbimai from './components/ManoSkelbimai'
 import PatikusiuSarasas from './components/PatikusiuSarasas'
 import NavBarMini from './components/NavBarMini'
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App()
 {
   const [state_status_text, set_state_status_text] = useState("")
@@ -60,7 +62,7 @@ function App()
     {
       set_state_mobile_mode(false)
     }
- 
+
     window.addEventListener('resize', () =>
     {
       // if (document.documentElement.clientWidth < document.documentElement.scrollWidth)
@@ -79,7 +81,7 @@ function App()
   return (
     <div className="App">
 
-{
+      {
         state_mobile_mode === true ?
           <NavBarMini
             set_state_current_view={set_state_current_view}
@@ -138,6 +140,7 @@ function App()
             fetch_state_vartotojas()
             return <Skelbimai
               set_state_status_text={set_state_status_text}
+              state_vartotojas={state_vartotojas}
             />
           }
 
@@ -158,7 +161,7 @@ function App()
               set_state_status_text={set_state_status_text}
             />
           }
-
+          
 
         })()
       }

@@ -3,7 +3,7 @@ import { useState, createRef, useEffect } from "react"
 import axios from "axios"
 import Komentaras from "./Komentaras"
 
-const SkelbimasBig = ({ _id, handle_close, set_state_status_text }) =>
+const SkelbimasBig = ({ _id, handle_close, set_state_status_text, state_vartotojas }) =>
 {
     //success loading error
     const [state_status, set_state_status] = useState("")
@@ -11,7 +11,6 @@ const SkelbimasBig = ({ _id, handle_close, set_state_status_text }) =>
     const [state_skelbimas, set_state_skelbimas] = useState({})
 
     const ref_textarea_komentaras = createRef()
-
     const handle_read = async (_id, tekstas) =>
     {
         try
@@ -29,7 +28,6 @@ const SkelbimasBig = ({ _id, handle_close, set_state_status_text }) =>
             set_state_status("error")
         }
     }
-
     useEffect(() => { handle_read(_id) }, [])
 
     const handle_add_komentaras = async (_id, tekstas) =>
@@ -64,6 +62,26 @@ const SkelbimasBig = ({ _id, handle_close, set_state_status_text }) =>
                 data: { _id: _id }
             })
             set_state_status_text("Atlikta")
+            setTimeout(() => { set_state_status_text("") }, 1000)
+        }
+        catch (err)
+        {
+            set_state_status_text("Klaida")
+            setTimeout(() => { set_state_status_text("") }, 1000)
+        }
+    }
+
+    const handle_block_skelbimas = async () =>
+    {
+        try
+        {
+            set_state_status_text("Vykdoma...")
+            const result = await axios({
+                method: "delete",
+                "url": `/api/skelbimai/${_id}`
+            })
+            set_state_status_text("Atlikta")
+            handle_close()
             setTimeout(() => { set_state_status_text("") }, 1000)
         }
         catch (err)
@@ -113,6 +131,8 @@ const SkelbimasBig = ({ _id, handle_close, set_state_status_text }) =>
                 <button onClick={() => { handle_add_komentaras(_id, ref_textarea_komentaras.current.value) }}>komentuoti</button>
 
                 <button onClick={() => { handle_add_to_patikusiu_sarasas(_id) }}>Pridėti į patikusių sąrašą</button>
+
+                {state_vartotojas.tipas === "administratorius" ? <button onClick={handle_block_skelbimas}>blokuoti</button> : null}
 
                 <button onClick={handle_close}>close</button>
 

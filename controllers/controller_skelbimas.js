@@ -375,12 +375,12 @@ const controller_skelbimas_delete = async (req, res) =>
         }
 
         // prevent execution if user isn't autorius
-        if (result_of_model_skelbimas_find[0].autorius !== result_of_model_vartotojas_find[0].vardas) 
-        {
-            res.statusCode = 403
-            res.end()
-            return
-        }
+        // if (result_of_model_skelbimas_find[0].autorius !== result_of_model_vartotojas_find[0].vardas) 
+        // {
+        //     res.statusCode = 403
+        //     res.end()
+        //     return
+        // }
 
         // delete
         const result_of_model_skelbimas_deleteOne = await model_skelbimas.deleteOne(

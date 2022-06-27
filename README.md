@@ -31,12 +31,7 @@ administratorius:
  
 vartototojas:
     prisijungimo vardas:
-    vartotojas
+    temp
     slaptazodis:
-    vartotojas
+    temp
 
-antras vartototojas:
-    prisijungimo vardas:
-    vartotojas2
-    slaptazodis:
-    vartotojas2

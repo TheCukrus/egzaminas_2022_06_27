@@ -33,12 +33,12 @@ const SignUp = ({ set_state_status_text, fetch_state_vartotojas }) =>
 
     return (
         <div className="SignUp">
-            <h1>Vartotojo registracijos puslapis</h1>
+            <h1>Registracijos puslapis</h1>
             <span>Vardas</span>
             <input type="text" ref={ref_vardas} />
             <span>Slaptažodis</span>
             <input type="password" ref={ref_slaptazodis} />
-            <button onClick={handle_click}>Registruoti</button>
+            <button onClick={handle_click}>Registruotis</button>
         </div>
     )
 }

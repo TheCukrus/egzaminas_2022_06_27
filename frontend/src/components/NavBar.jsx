@@ -45,9 +45,9 @@ const NavBar = ({ set_state_current_view, state_vartotojas, fetch_state_vartotoj
 
                 <span></span>
 
-                <button onClick={() => { set_state_current_view("SignUp") }}>SignUp</button>
+                <button onClick={() => { set_state_current_view("SignUp") }}>Užsiregistruoti</button>
 
-                <button onClick={() => { set_state_current_view("SignIn") }}>SignIn</button>
+                <button onClick={() => { set_state_current_view("SignIn") }}>Prisijungti</button>
 
             </div>
         )

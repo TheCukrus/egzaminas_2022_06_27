@@ -8,6 +8,7 @@ const SkelbimasSmall = ({ skelbimas, handle_click }) =>
             <span>{skelbimas.kaina} EUR</span>
             <span>{skelbimas.autorius}</span>
             <img src={skelbimas.nuotrauka_base64} />
+
         </div>
     )
 }
